@@ -22,6 +22,10 @@ module.exports = (env, argv) => {
           {
             from: path.resolve(__dirname, 'src', 'favicon.ico'),
             to: path.resolve(__dirname, 'dist')
+          },
+          {
+            from: path.resolve(__dirname, 'src', 'image.svg'),
+            to: path.resolve(__dirname, 'dist')
           }
         ]
       }),
