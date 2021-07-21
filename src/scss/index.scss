@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 @import '~normalize.css';
 
@@ -10,7 +10,8 @@ body, html {
 }
 
 body {
-   
+   background: #E3F6F5;
+   font-family: 'Poppins';
 }
 
 .voting {
@@ -25,14 +26,15 @@ body {
 
    &__img {
       border-radius: 10px;
+      margin: 0;
+      padding: 0;
+      display: block;
    }
    
 
    &__btns {
       display: flex;
-      background: #2B2E4A;
-      border-radius: 10px;
-
+      margin-top: 5px;
    }
 
    &__btn-wrapper {
@@ -42,6 +44,12 @@ body {
       align-items: center;
       justify-content: center;
       padding: 5px;
+      background: #2B2E4A;
+      border-radius: 10px;
+   }
+
+   &__btn-wrapper + &__btn-wrapper {
+      margin-left: 5px;
    }
 
    &__btn {
@@ -68,7 +76,6 @@ body {
    &__count {
       width: 100px;
       font-size: 50px;
-      font-family: 'Montserrat';
       color: #fff;
       margin: 0;
       text-align: center;
@@ -76,5 +83,13 @@ body {
 
    &__count:disabled {
       background: transparent;
+   }
+}
+
+
+@media (max-width: 500px) {
+   .voting-item__count {
+      width: 80px;
+      font-size: 40px;
    }
 }
